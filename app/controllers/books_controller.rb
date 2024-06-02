@@ -6,6 +6,7 @@ class BooksController < ApplicationController
     @book_new = Book.new
     @user = @book.user
     @book_comment = BookComment.new
+
     @room = Room.new #argumenterrorにより追記
     @book_detail = Book.find(params[:id])
     unless ReadCount.find_by(user_id: current_user.id, book_id: @book_detail.id)
