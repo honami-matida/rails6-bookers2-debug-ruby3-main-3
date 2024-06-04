@@ -77,10 +77,9 @@
             <td><%= @books.created_today.count %></td>
           </tr>
         </table>
-        
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+
         <canvas id="myLineChart"></canvas>
-        
           <script>
             $(document).on('turbolinks:load', function() {
               var ctx = document.getElementById("myLineChart");
