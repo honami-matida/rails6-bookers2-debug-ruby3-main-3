@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     @this_week_book = @books.created_this_week
     @last_week_book = @books.created_last_week
     @book = Book.new
-    #@room = Room.new #エラーがおきたので追記した
+    @room = Room.new #エラーがおきたので追記した
 
     @currentUserEntry = Entry.where(user_id: current_user.id)
     @userEntry = Entry.where(user_id: @user.id)

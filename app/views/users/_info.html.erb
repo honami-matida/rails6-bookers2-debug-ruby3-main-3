@@ -31,7 +31,7 @@
       <% if @isRoom == true %>
         <%= link_to "チャットへ", room_path(@roomId), class: "btn btn-primary" %>
       <% else %>
-        <%= form_for @room do |f| %>
+        <%= fields_for @room do |f| %> <%# form_for→fields_for エラーのため修正%>
           <%= fields_for @entry do |e| %>
             <%= e.hidden_field:user_id, value: @user.id %>
           <% end %>
