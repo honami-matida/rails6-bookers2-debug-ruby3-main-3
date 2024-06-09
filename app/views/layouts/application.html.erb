@@ -13,6 +13,10 @@
   </head>
   <body>
     <%= render 'layouts/header' %>
+    <% if user_signed_in? %>
+      <%= render partial: 'searches/search_form' %>
+　　  <%= render 'tagsearches/tagsearch' %>
+    <% end %>
       <main>
         <p id="notice"><%= notice %></p>
         <%= yield %>
